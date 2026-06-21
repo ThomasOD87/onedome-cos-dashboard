@@ -113,10 +113,10 @@
 <div class="main">
   <div class="big-rock">
     <div class="big-rock-label">🪨 Big Rock Today</div>
-    <div class="big-rock-title">"Find out more" nurture journey — get to shippable state</div>
-    <div class="big-rock-why">TV campaign live since May 22nd. Funnel is broken. Every day unresolved = wasted media spend. This is the single most important thing to move forward today.</div>
+    <div class="big-rock-title">Prep for Marketing Meeting — know your CEO approvals before 16:00</div>
+    <div class="big-rock-why">You're walking into a CEO sign-off meeting with Paul, Rachel, Nick and Babek at 16:00 with no approvals list prepared. That's the biggest risk today. Get clear on what decisions you're bringing and what the TV campaign status update is.</div>
     <div class="big-rock-footer">
-      <span class="chip brand-onedome">OneDome</span>
+      <span class="chip brand-onedome">Cross-Brand</span>
       <span class="chip">HIGH priority</span>
     </div>
   </div>
@@ -180,7 +180,7 @@ const TASKS = [
   { id:'t08', title:'Build nurturing email journeys for new user flow', why:'Directly supports TV funnel fix. You need to architect this.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t09', title:'Weekly performance report — build template', why:"Can't run a performance meeting without shared data. Do once, delegate forever.", brand:'Cross', priority:'med', zone:'do', done:false },
   { id:'t10', title:'Set up weekly performance meeting with Heads of Dept', why:'Lead gen visibility across CMME, Better, Coreco — currently invisible.', brand:'Cross', priority:'med', zone:'do', done:false },
-  { id:'t11', title:'Finalise retargeting ads — creative/budget decision', why:'Only Thomas needs to make the call. Monique handles execution.', brand:'OneDome', priority:'med', zone:'do', done:false },
+  { id:'t11', title:'Finalise retargeting ads — creative/budget decision', why:'Monique on holiday all week — no one to execute. Decision parked until she returns.', brand:'OneDome', priority:'med', zone:'park', done:false },
   { id:'t12', title:'Decide on awards participation strategy', why:'Marketing leadership decision. 2-week window before it drifts.', brand:'Cross', priority:'med', zone:'do', done:false },
   { id:'t17', title:'Provide estate planning info + PR interview contact to Rachel', why:'Rachel is blocked waiting for this. One email. 10 minutes.', brand:'Cross', priority:'high', zone:'do', done:false },
   { id:'t25', title:'Brief Kat + Tech on Better → OneDome Finance rebrand', why:"Kat owns delivery but needs your brief first. If migration lands before rebrand it's a crisis.", brand:'Better', priority:'med', zone:'do', done:false },
@@ -208,18 +208,18 @@ const RISKS = [
 ];
 
 const DAY_PLAN = [
-  { time:'9–9:30',   bar:'bar-red',   label:'Send MSE statement + unblock SmartChat', note:'Two quick tasks. Clear them before anything else.' },
-  { time:'9:30–11',  bar:'bar-red',   label:'Big Rock: "Find out more" nurture journey', note:'Deep work. No Slack, no meetings.' },
-  { time:'11–11:30', bar:'bar-amber', label:'Send fields to David (protection form)', note:"You're the bottleneck. 20 minutes max." },
-  { time:'11:30–12', bar:'bar-amber', label:'Delegate batch to team', note:'Brief Marketing Exec on report, CMME, sigs. One message.' },
-  { time:'12–1',     bar:'bar-muted', label:'Lunch / break', note:'Protect it.' },
-  { time:'1–2',      bar:'bar-red',   label:'Engineering call — clarify journey ownership', note:"Who builds it? What's the timeline? Get a clear answer." },
-  { time:'2–3',      bar:'bar-blue',  label:'Chase Monty + LiveChat legal call', note:'Senior stakeholder moves. Only you can drive these.' },
-  { time:'3–4',      bar:'bar-amber', label:'Retargeting ad decision + Monique check-in', note:'Make the call. Monique handles the rest.' },
-  { time:'4–5',      bar:'bar-muted', label:'Inbox clear + update board', note:"What moved? What's blocked? Tell Claude to update the dashboard." },
+  { time:'8:00',     bar:'bar-muted', label:'Travel to work', note:'Use this time to mentally map what CEO approvals you need for 16:00.' },
+  { time:'10:00–11', bar:'bar-red',   label:'Quick wins: SmartChat unblock + MSE statement', note:'Send Cameron KB feedback + Hidden Form. Send MSE statement. Both under 20 mins. Clear the blockers.' },
+  { time:'11:00–12', bar:'bar-blue',  label:'Q3 Plan follow up — Paul Troy', note:'Come out of this knowing exactly what's going to the CEO today at 16:00.' },
+  { time:'12:00–13', bar:'bar-red',   label:'Big Rock: Marketing Meeting prep', note:'Build your approvals list. Clarify TV campaign status update. Know your numbers before you walk in.' },
+  { time:'13:00–14', bar:'bar-muted', label:'Lunch', note:'Protect it. You need headspace before the afternoon.' },
+  { time:'14:00–14:30', bar:'bar-muted', label:'Phonexa discovery call', note:'Sales pitch — listen, ask questions, do not commit to anything. 30 mins max.' },
+  { time:'14:30–15:30', bar:'bar-red',label:'Marketing Meeting final prep + send fields to David', note:'Tighten your deck/notes. Also send protection referral fields to David — 10 mins.' },
+  { time:'15:30–16', bar:'bar-amber', label:'Buffer + travel to room', note:'Do not start anything new. Compose yourself.' },
+  { time:'16:00–17:30', bar:'bar-blue', label:'Marketing Meeting — Sign-off', note:'TV update, CEO approvals, full team. You need to lead this clearly.' },
 ];
 
-const LAST_UPDATED = "Sunday 21 June 2026";
+const LAST_UPDATED = "Monday 22 June 2026 — updated for today's calendar";
 
 // ---- STATE ----
 let activeBrand = 'all';
