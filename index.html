@@ -171,31 +171,23 @@
 const TASKS = [
   // DO MYSELF
   { id:'t01', title:'"Find out more" nurture journey — get to shippable state', why:'TV campaign live since May 22nd. Funnel broken. Every day = wasted media spend.', brand:'OneDome', priority:'high', zone:'do', done:false },
-  { id:'t02', title:'Clarify engineering ownership on "Find out more" journey', why:'Business pressure to launch this week. Need a clear handoff and timeline.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t03', title:'MSE invoicing — send account statement', why:'Flagged urgent. Allow 1 hour — do not rush this. Send and confirm receipt Monday afternoon.', brand:'Cross', priority:'high', zone:'do', done:false },
-  { id:'t04', title:'Send Cameron: KB feedback + Hidden Form for SmartChat', why:'You are the only blocker to Monday go-live. Paul has signed off. 20 mins max.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t04', title:'Send Knowledge Base feedback + Hidden Form to Cameron (SmartChat/LiveChat)', why:'Cameron needs KB feedback and the Hidden Form to push leads into the CRM. He did not receive the email. This is the blocker to go-live.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t05', title:'Send protection referral form fields to David', why:'Fabian is waiting. David needs these to build the endpoint. You are the bottleneck.', brand:'OneDome', priority:'high', zone:'do', done:false },
-  { id:'t06', title:'Join legal call — resolve LiveChat contract terms', why:'Trial clarity, fees, cancellation. Paul co-owns but needs you on the call.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t07', title:'Chase Monty — get commercial website live', why:'Blocked and dragging. Only you can chase this at the right level.', brand:'OneDome', priority:'med', zone:'do', done:false },
   { id:'t08', title:'Build nurturing email journeys for new user flow', why:'Directly supports TV funnel fix. You need to architect this.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t09', title:'Weekly performance report — build template', why:"Can't run a performance meeting without shared data. Do once, delegate forever.", brand:'Cross', priority:'med', zone:'do', done:false },
   { id:'t10', title:'Set up weekly performance meeting with Heads of Dept', why:'Lead gen visibility across CMME, Better, Coreco — currently invisible.', brand:'Cross', priority:'med', zone:'do', done:false },
-  { id:'t11', title:'Finalise retargeting ads — creative/budget decision', why:'Monique on holiday all week — no one to execute. Decision parked until she returns.', brand:'OneDome', priority:'med', zone:'park', done:false },
-  { id:'t12', title:'Decide on awards participation strategy', why:'Marketing leadership decision. 2-week window before it drifts.', brand:'Cross', priority:'med', zone:'do', done:false },
-  { id:'t17', title:'Provide estate planning info + PR interview contact to Rachel', why:'Rachel is blocked waiting for this. One email. 10 minutes.', brand:'Cross', priority:'high', zone:'do', done:false },
-  { id:'t25', title:'Brief Kat + Tech on Better → OneDome Finance rebrand', why:"Kat owns delivery but needs your brief first. If migration lands before rebrand it's a crisis.", brand:'Better', priority:'med', zone:'do', done:false },
+  { id:'t11', title:'Finalise retargeting ads — creative/budget decision', why:'Decision made. Monique to execute on return.', brand:'OneDome', priority:'med', zone:'ignore', done:true },
   // DELEGATE
   { id:'t13', title:'Compile weekly marketing report (ongoing)', why:'Team owns from template. Thomas reviews Friday.', brand:'Cross', priority:'med', zone:'delegate', done:false, owner:'Marketing Exec' },
   { id:'t14', title:'CMME About Us — remove old staff, update content', why:'Brief team with 48hr deadline. Execution only.', brand:'CMME', priority:'med', zone:'delegate', done:false, owner:'Marketing Exec' },
   { id:'t22', title:'Internal social post engagement push', why:'One Teams message setting expectations. Team executes.', brand:'Cross', priority:'low', zone:'delegate', done:false, owner:'Marketing Team' },
-  { id:'t23', title:'Email signature rollout', why:'Brief team with deadline. Do not personally own this.', brand:'Cross', priority:'low', zone:'delegate', done:false, owner:'Marketing Exec' },
+  { id:'t23', title:'Create HTML email signature for team', why:'Design and build the HTML email signature template for the whole team to use.', brand:'Cross', priority:'med', zone:'do', done:false },
   // PARK
   { id:'t27', title:'H2 brand strategy deck', why:'Important but not this week. Schedule once funnel is stable.', brand:'Cross', priority:'med', zone:'park', done:false },
   { id:'t28', title:'SEO/GEO strategy — dominate homebuying search', why:'Zero capacity until SEO/GEO specialist is hired.', brand:'OneDome', priority:'high', zone:'park', done:false },
   { id:'t29', title:'Email cross-sell/upsell strategy', why:'Blocked until email automation specialist is hired.', brand:'Cross', priority:'high', zone:'park', done:false },
-  { id:'t30', title:'Tech/investor event presence plan', why:'Good opportunity. Not urgent. 2–3 week horizon.', brand:'Cross', priority:'low', zone:'park', done:false },
-  { id:'t32', title:'Review + standardise all job descriptions', why:'Month-end. Brief team — do not write these yourself.', brand:'Cross', priority:'low', zone:'park', done:false },
-  { id:'t33', title:'Update Glassdoor, careers page, company profiles', why:'Month-end. Team task.', brand:'Cross', priority:'low', zone:'park', done:false },
   { id:'t34', title:'Phonexa discovery call — rescheduled to Friday', why:'Sales pitch from Phonexa re: marketing automation system. Moved from Monday — do not let this drift past Friday.', brand:'Cross', priority:'med', zone:'park', done:false },
 ];
 
@@ -224,7 +216,7 @@ const DAY_PLAN = [
   { time:'16:00–17:30', bar:'bar-blue',  label:'Marketing Meeting — Sign-off', note:'TV update, CEO approvals, full team. You prepped at 12:00 — you are ready.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 — Phonexa parked to Friday, MSE invoicing 14:00–15:00";
+const LAST_UPDATED = "Monday 22 June 2026 — tasks cleaned up, LiveChat clarified, retargeting done";
 
 // ---- STATE ----
 let activeBrand = 'all';
