@@ -113,8 +113,8 @@
 <div class="main">
   <div class="big-rock">
     <div class="big-rock-label">🪨 Big Rock Today</div>
-    <div class="big-rock-title">Resolve LiveChat legal call — get contract signed today</div>
-    <div class="big-rock-why">LiveChat is now the commercial priority. Get the legal call done, resolve trial terms, fees and cancellation, and get it over the line today. Tomorrow has no space for it.</div>
+    <div class="big-rock-title">Send KB feedback + Hidden Form to Cameron — unblock SmartChat go-live</div>
+    <div class="big-rock-why">Cameron needs the Knowledge Base feedback and the Hidden Form to push leads into the CRM. He never received the email. You are the only blocker. This unlocks go-live. Do it first thing.</div>
     <div class="big-rock-footer">
       <span class="chip brand-onedome">OneDome</span>
       <span class="chip">HIGH priority</span>
@@ -192,7 +192,7 @@ const TASKS = [
 ];
 
 const RISKS = [
-  { color:'#ef4444', title:'LiveChat must be resolved today', detail:'No space for it tomorrow. Legal call must happen today — trial terms, fees and cancellation agreed.' },
+  { color:'#ef4444', title:'KB feedback + Hidden Form not sent to Cameron yet', detail:'SmartChat cannot go live until Cameron receives this. You are the only blocker. Do it first thing Monday.' },
   { color:'#ef4444', title:'TV funnel broken since 22nd May', detail:'Paid media hitting a leaky funnel. CPL rising. Every day unresolved = wasted spend.' },
   { color:'#ef4444', title:'SmartChat go-live blocked by Thomas', detail:'Paul signed off. Cameron is waiting. Send KB feedback + Hidden Form today.' },
   { color:'#f59e0b', title:'Protection referral form — Fabian waiting', detail:'David needs fields from you to build the endpoint. You are the bottleneck.' },
@@ -205,11 +205,12 @@ const RISKS = [
 const DAY_PLAN = [
   { time:'8:00',        bar:'bar-muted', label:'Travel to work', note:'Use the commute to think through LiveChat terms — what do you need resolved on the call?' },
   { time:'10:00–10:30', bar:'bar-red',   label:'SmartChat unblock + send MSE statement', note:'Send Cameron KB feedback + Hidden Form. Fire off MSE statement. Both done in 30 mins.' },
-  { time:'10:30–11',    bar:'bar-red',   label:'LiveChat prep — know your position before the call', note:'What terms are you pushing on? Trial length, fees, cancellation. Go in with a clear walk-away position.' },
+  { time:'10:00–10:30', bar:'bar-red',   label:'🪨 Big Rock: Send KB feedback + Hidden Form to Cameron', note:'Do this first. Attach the Hidden Form, include KB feedback clearly. Confirm receipt. Unblocks go-live.' },
+  { time:'10:30–11',    bar:'bar-amber', label:'Send fields to David + MSE statement', note:'Protection referral fields to David (10 mins). Fire off MSE statement.' },
   { time:'11:00–12',    bar:'bar-blue',  label:'Q3 Plan follow up — Paul Troy', note:'Come out knowing what decisions need CEO sign-off at 16:00.' },
-  { time:'12:00–12:30', bar:'bar-amber', label:'CEO Meeting prep — 30 mins only', note:'TV status in one sentence. 2-3 approvals you need. That is it. Do not over-prepare.' },
+  { time:'12:00–12:30', bar:'bar-amber', label:'CEO Meeting prep — 30 mins only', note:'TV status in one sentence. 2-3 approvals you need. Do not over-prepare.' },
   { time:'12:30–13',    bar:'bar-muted', label:'Lunch', note:'Protect it.' },
-  { time:'13:00–14',    bar:'bar-red',   label:'LiveChat legal call — get it resolved', note:'Big Rock. Resolve trial terms, fees, cancellation. Come out with a signed-off next step.' },
+  { time:'13:00–14',    bar:'bar-amber', label:'Chase Monty + nurture journey progress', note:'Chase commercial website. Make whatever progress you can on the nurture journey.'},
   { time:'14:00–15',    bar:'bar-amber', label:'MSE invoicing — full hour', note:'Do not rush this. Get it right. Send and confirm receipt before the Marketing Meeting.' },
   { time:'15:00–15:30', bar:'bar-amber', label:'Send fields to David + delegate batch', note:'Protection referral fields to David (10 mins). Brief Marketing Exec on report, CMME, sigs.' },
   { time:'15:30–16',    bar:'bar-muted', label:'Buffer — compose yourself', note:'Do not start anything new. Quick review of what you are bringing to the meeting.' },
@@ -217,7 +218,7 @@ const DAY_PLAN = [
   { time:'17:30–18:30', bar:'bar-muted', label:'Wind down — clear loops, prep tomorrow', note:'Low energy time. No new tasks. Inbox replies, update dashboard, tell Claude what moved. Leave clean.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 — final day plan, wind-down 17:30-18:30";
+const LAST_UPDATED = "Monday 22 June 2026 — Big Rock: KB feedback to Cameron, LiveChat legal done";
 
 // ---- STATE ----
 let activeBrand = 'all';
