@@ -189,6 +189,9 @@ const TASKS = [
   { id:'t28', title:'SEO/GEO strategy — dominate homebuying search', why:'Zero capacity until SEO/GEO specialist is hired.', brand:'OneDome', priority:'high', zone:'park', done:false },
   { id:'t29', title:'Email cross-sell/upsell strategy', why:'Blocked until email automation specialist is hired.', brand:'Cross', priority:'high', zone:'park', done:false },
   { id:'t34', title:'Phonexa discovery call — rescheduled to Friday', why:'Sales pitch from Phonexa re: marketing automation system. Moved from Monday — do not let this drift past Friday.', brand:'Cross', priority:'med', zone:'park', done:false },
+  { id:'t35', title:'Finalise nurture journey in Base44', why:'Get the 10-step, 3-email post-Find Out More flow to a state ready to show Tural. Do this Monday 13:00-14:00.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t36', title:'Meet Tural — review nurture journey + get deploy access', why:'Show Tural what you built. He walks you through connecting it to the live environment and grants Claude Code deploy access. Aiming Tuesday, backup Wednesday.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t37', title:'Deploy nurture journey via Claude Code', why:'Once Tural grants access, Claude will walk you through this step by step. Blocked until t36 is done.', brand:'OneDome', priority:'high', zone:'park', done:false },
 ];
 
 const RISKS = [
@@ -200,6 +203,7 @@ const RISKS = [
   { color:'#f59e0b', title:'Better → OneDome Finance rebrand has no timeline', detail:"If migration lands before rebrand it becomes a crisis. Brief Kat now." },
   { color:'#6b7280', title:'Weekly performance report doesn\'t exist yet', detail:"Can't run a performance meeting without shared data. Template needed first." },
   { color:'#6b7280', title:'Phonexa call must happen Friday', detail:'Moved from Monday. Do not let it drift into next week — book a time with them today if you can.' },
+  { color:'#f59e0b', title:'Tural meeting not yet confirmed — nurture deploy blocked', detail:'Aiming Tuesday, backup Wednesday. If it slips past Wednesday the nurture journey cannot go live this week. Chase Tural today to confirm.' },
 ];
 
 const DAY_PLAN = [
@@ -210,7 +214,7 @@ const DAY_PLAN = [
   { time:'11:00–12',    bar:'bar-blue',  label:'Q3 Plan follow up — Paul Troy', note:'Come out knowing what decisions need CEO sign-off at 16:00.' },
   { time:'12:00–12:30', bar:'bar-amber', label:'CEO Meeting prep — 30 mins only', note:'TV status in one sentence. 2-3 approvals you need. Do not over-prepare.' },
   { time:'12:30–13',    bar:'bar-muted', label:'Lunch', note:'Protect it.' },
-  { time:'13:00–14',    bar:'bar-amber', label:'Chase Monty + nurture journey progress', note:'Chase commercial website. Make whatever progress you can on the nurture journey.'},
+  { time:'13:00–14',    bar:'bar-amber', label:'Chase Monty + finalise nurture journey in Base44', note:'Chase Monty on commercial website (10 mins). Then focus on getting the nurture journey to a showable state for Tural tomorrow.'},
   { time:'14:00–15',    bar:'bar-amber', label:'MSE invoicing — full hour', note:'Do not rush this. Get it right. Send and confirm receipt before the Marketing Meeting.' },
   { time:'15:00–15:30', bar:'bar-amber', label:'Send fields to David + delegate batch', note:'Protection referral fields to David (10 mins). Brief Marketing Exec on report, CMME, sigs.' },
   { time:'15:30–16',    bar:'bar-muted', label:'Buffer — compose yourself', note:'Do not start anything new. Quick review of what you are bringing to the meeting.' },
@@ -218,7 +222,7 @@ const DAY_PLAN = [
   { time:'17:30–18:30', bar:'bar-muted', label:'Wind down — clear loops, prep tomorrow', note:'Low energy time. No new tasks. Inbox replies, update dashboard, tell Claude what moved. Leave clean.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 — Big Rock: KB feedback to Cameron, LiveChat legal done";
+const LAST_UPDATED = "Monday 22 June 2026 — nurture journey tasks added, Tural meeting Tue/Wed";
 
 // ---- STATE ----
 let activeBrand = 'all';
