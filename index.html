@@ -6,30 +6,14 @@
 <title>Thomas George · Chief of Staff Dashboard</title>
 <style>
   :root {
-    --bg: #0d0f14;
-    --surface: #161922;
-    --surface2: #1e2330;
-    --border: #2a2f3d;
-    --accent: #4f6ef7;
-    --accent2: #7c3aed;
-    --green: #22c55e;
-    --amber: #f59e0b;
-    --red: #ef4444;
-    --muted: #6b7280;
-    --text: #e8eaf0;
-    --text2: #9ca3af;
-    --font: 'Inter', system-ui, sans-serif;
-    --radius: 10px;
-    --shadow: 0 2px 12px rgba(0,0,0,0.4);
+    --bg: #0d0f14; --surface: #161922; --surface2: #1e2330; --border: #2a2f3d;
+    --accent: #4f6ef7; --accent2: #7c3aed; --green: #22c55e; --amber: #f59e0b;
+    --red: #ef4444; --muted: #6b7280; --text: #e8eaf0; --text2: #9ca3af;
+    --font: 'Inter', system-ui, sans-serif; --radius: 10px; --shadow: 0 2px 12px rgba(0,0,0,0.4);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 14px; min-height: 100vh; }
-
-  .topbar {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 24px; background: var(--surface); border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 100;
-  }
+  .topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
   .topbar-left { display: flex; align-items: center; gap: 14px; }
   .logo { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
   .logo span { color: var(--accent); }
@@ -46,31 +30,22 @@
   .btn-primary:hover { background: #3d5ae0; }
   .btn-ghost { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
   .btn-ghost:hover { color: var(--text); border-color: var(--accent); }
-
   .main { padding: 20px 24px; }
-
-  .big-rock {
-    background: linear-gradient(135deg, #1a1f35 0%, #1e1530 100%);
-    border: 1px solid #3b3f6e; border-radius: var(--radius);
-    padding: 20px 24px; margin-bottom: 20px; position: relative; overflow: hidden;
-  }
+  .big-rock { background: linear-gradient(135deg, #1a1f35 0%, #1e1530 100%); border: 1px solid #3b3f6e; border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px; position: relative; overflow: hidden; }
   .big-rock::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
   .big-rock-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
   .big-rock-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
   .big-rock-why { font-size: 13px; color: var(--text2); line-height: 1.5; }
   .big-rock-footer { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
-
   .chip { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
   .chip.brand-onedome { border-color: #4f6ef7; color: #4f6ef7; background: #1a1f35; }
   .chip.brand-cmme { border-color: #f59e0b; color: #f59e0b; background: #1f1a10; }
   .chip.brand-better { border-color: #22c55e; color: #22c55e; background: #101f15; }
   .chip.brand-coreco { border-color: #a855f7; color: #a855f7; background: #1a1030; }
-
   .stats-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 20px; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-align: center; }
   .stat-num { font-size: 22px; font-weight: 800; }
   .stat-label { font-size: 10px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 2px; }
-
   .filter-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
   .filter-label { font-size: 11px; color: var(--muted); font-weight: 600; }
   .filter-chip { padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--surface2); color: var(--text2); transition: all 0.15s; }
@@ -79,7 +54,6 @@
   .filter-chip[data-brand="CMME"].active { border-color: #f59e0b; color: #f59e0b; background: #1f1a10; }
   .filter-chip[data-brand="Better"].active { border-color: #22c55e; color: #22c55e; background: #101f15; }
   .filter-chip[data-brand="Coreco"].active { border-color: #a855f7; color: #a855f7; background: #1a1030; }
-
   .board-wrapper { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
   .column { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; min-height: 300px; }
   .col-do { border-top: 2px solid var(--red); }
@@ -94,7 +68,6 @@
   .col-ignore .column-title { color: var(--muted); }
   .col-count { font-size: 11px; font-weight: 700; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--surface2); color: var(--text2); }
   .cards-zone { padding: 10px; min-height: 240px; }
-
   .card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 8px; cursor: grab; transition: all 0.15s; user-select: none; }
   .card:hover { border-color: var(--accent); transform: translateY(-1px); box-shadow: var(--shadow); }
   .card.dragging { opacity: 0.4; transform: rotate(1deg); }
@@ -112,41 +85,29 @@
   .card-btn:hover { color: var(--text); border-color: var(--accent); }
   .card-btn.done-btn { color: var(--green); border-color: var(--green); }
   .drop-zone-active { background: rgba(79,110,247,0.06); border-radius: 8px; }
-
   .bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
   .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .panel-header { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
   .panel-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text2); }
   .panel-body { padding: 12px 16px; }
-
   .risk-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .risk-item:last-child { border-bottom: none; }
   .risk-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
   .risk-text { font-size: 12px; color: var(--text2); line-height: 1.4; }
   .risk-text strong { color: var(--text); display: block; margin-bottom: 2px; }
-
   .time-block { display: flex; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .time-block:last-child { border-bottom: none; }
   .time { font-size: 11px; color: var(--muted); font-weight: 600; min-width: 48px; padding-top: 2px; }
   .time-bar { width: 3px; border-radius: 2px; flex-shrink: 0; align-self: stretch; min-height: 30px; }
-  .bar-red { background: var(--red); }
-  .bar-amber { background: var(--amber); }
-  .bar-blue { background: var(--accent); }
-  .bar-muted { background: var(--muted); }
+  .bar-red { background: var(--red); } .bar-amber { background: var(--amber); }
+  .bar-blue { background: var(--accent); } .bar-muted { background: var(--muted); }
   .time-label { font-size: 12px; font-weight: 600; color: var(--text); }
   .time-note { font-size: 11px; color: var(--text2); margin-top: 2px; }
-
-  /* Loading overlay */
-  .loading-overlay {
-    position: fixed; inset: 0; background: var(--bg);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    z-index: 999; gap: 16px; transition: opacity 0.4s;
-  }
+  .loading-overlay { position: fixed; inset: 0; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 999; gap: 16px; transition: opacity 0.4s; }
   .loading-overlay.hidden { opacity: 0; pointer-events: none; }
   .spinner { width: 36px; height: 36px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .loading-text { font-size: 13px; color: var(--text2); font-weight: 600; }
-
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; align-items: center; justify-content: center; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; width: 440px; max-width: 95vw; }
@@ -158,28 +119,15 @@
   .form-textarea { resize: vertical; min-height: 65px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .modal-footer { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
-
-  @media (max-width: 900px) {
-    .board-wrapper { grid-template-columns: 1fr 1fr; }
-    .stats-bar { grid-template-columns: repeat(3, 1fr); }
-    .bottom-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 600px) {
-    .board-wrapper { grid-template-columns: 1fr; }
-    .stats-bar { grid-template-columns: 1fr 1fr; }
-    .main { padding: 14px; }
-  }
+  @media (max-width: 900px) { .board-wrapper { grid-template-columns: 1fr 1fr; } .stats-bar { grid-template-columns: repeat(3, 1fr); } .bottom-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .board-wrapper { grid-template-columns: 1fr; } .stats-bar { grid-template-columns: 1fr 1fr; } .main { padding: 14px; } }
 </style>
 </head>
 <body>
-
-<!-- Loading overlay -->
 <div class="loading-overlay" id="loadingOverlay">
   <div class="spinner"></div>
-  <div class="loading-text">Loading your tasks from Google Sheets...</div>
+  <div class="loading-text">Loading your tasks...</div>
 </div>
-
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-left">
     <div class="logo">Thomas George <span>·</span> Chief of Staff</div>
@@ -193,18 +141,13 @@
     <button class="btn btn-primary" onclick="openModal()">+ Add Task</button>
   </div>
 </div>
-
 <div class="main">
-
-  <!-- BIG ROCK -->
   <div class="big-rock">
     <div class="big-rock-label">🪨 Big Rock Today</div>
     <div class="big-rock-title" id="bigRockTitle">Loading...</div>
     <div class="big-rock-why" id="bigRockWhy"></div>
     <div class="big-rock-footer" id="bigRockMeta"></div>
   </div>
-
-  <!-- STATS -->
   <div class="stats-bar">
     <div class="stat-card"><div class="stat-num" id="statTotal" style="color:var(--text)">—</div><div class="stat-label">Total Tasks</div></div>
     <div class="stat-card"><div class="stat-num" id="statDo" style="color:var(--red)">—</div><div class="stat-label">Do Myself</div></div>
@@ -212,8 +155,6 @@
     <div class="stat-card"><div class="stat-num" id="statPark" style="color:var(--accent)">—</div><div class="stat-label">Parked</div></div>
     <div class="stat-card"><div class="stat-num" id="statDone" style="color:var(--green)">—</div><div class="stat-label">Done</div></div>
   </div>
-
-  <!-- FILTER -->
   <div class="filter-bar">
     <span class="filter-label">Brand:</span>
     <span class="filter-chip active" data-brand="all" onclick="filterBrand('all',this)">All</span>
@@ -223,8 +164,6 @@
     <span class="filter-chip" data-brand="Coreco" onclick="filterBrand('Coreco',this)">Coreco</span>
     <span class="filter-chip" data-brand="Cross" onclick="filterBrand('Cross',this)">Cross-Brand</span>
   </div>
-
-  <!-- BOARD -->
   <div class="board-wrapper">
     <div class="column col-do">
       <div class="column-header"><span class="column-title">Do Myself</span><span class="col-count" id="count-do">—</span></div>
@@ -243,8 +182,6 @@
       <div class="cards-zone" id="zone-ignore" ondragover="onDragOver(event)" ondrop="onDrop(event,'ignore')" ondragleave="onDragLeave(event)"></div>
     </div>
   </div>
-
-  <!-- BOTTOM PANELS -->
   <div class="bottom-grid">
     <div class="panel">
       <div class="panel-header"><span class="panel-title">⚠️ Risks & Dropped Balls</span></div>
@@ -255,55 +192,19 @@
       <div class="panel-body" id="dayPlan"></div>
     </div>
   </div>
-
 </div>
-
-<!-- ADD TASK MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
   <div class="modal">
     <h3>Add Task</h3>
-    <div class="form-group">
-      <label class="form-label">Task title</label>
-      <input class="form-input" id="taskTitle" placeholder="e.g. Review CMME landing page performance" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Why it matters</label>
-      <textarea class="form-textarea" id="taskWhy" placeholder="e.g. Conversion blocker — 40% drop-off on step 2"></textarea>
+    <div class="form-group"><label class="form-label">Task title</label><input class="form-input" id="taskTitle" placeholder="e.g. Review CMME landing page performance" /></div>
+    <div class="form-group"><label class="form-label">Why it matters</label><textarea class="form-textarea" id="taskWhy" placeholder="e.g. Conversion blocker — 40% drop-off on step 2"></textarea></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Brand</label><select class="form-select" id="taskBrand"><option value="OneDome">OneDome</option><option value="CMME">CMME</option><option value="Better">Better.co.uk</option><option value="Coreco">Coreco</option><option value="Cross">Cross-Brand</option></select></div>
+      <div class="form-group"><label class="form-label">Priority</label><select class="form-select" id="taskPriority"><option value="high">High</option><option value="med">Medium</option><option value="low">Low</option></select></div>
     </div>
     <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Brand</label>
-        <select class="form-select" id="taskBrand">
-          <option value="OneDome">OneDome</option>
-          <option value="CMME">CMME</option>
-          <option value="Better">Better.co.uk</option>
-          <option value="Coreco">Coreco</option>
-          <option value="Cross">Cross-Brand</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Priority</label>
-        <select class="form-select" id="taskPriority">
-          <option value="high">High</option>
-          <option value="med">Medium</option>
-          <option value="low">Low</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Zone</label>
-        <select class="form-select" id="taskZone">
-          <option value="do">Do Myself</option>
-          <option value="delegate">Delegate</option>
-          <option value="park">Park</option>
-          <option value="ignore">Ignore</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Owner (if delegating)</label>
-        <input class="form-input" id="taskOwner" placeholder="e.g. Monique / Rachel" />
-      </div>
+      <div class="form-group"><label class="form-label">Zone</label><select class="form-select" id="taskZone"><option value="do">Do Myself</option><option value="delegate">Delegate</option><option value="park">Park</option><option value="ignore">Ignore</option></select></div>
+      <div class="form-group"><label class="form-label">Owner (if delegating)</label><input class="form-input" id="taskOwner" placeholder="e.g. Monique / Rachel" /></div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
@@ -311,12 +212,40 @@
     </div>
   </div>
 </div>
-
 <script>
-// ---- CONFIG ----
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIFRFilQ1R5GpEbOfnOoV3zHjWGn5W1E3jV5hVy4k7GKRGqMr0qVHnFQlJE1OmQhrD/exec";
 
-// ---- STATE ----
+// Thomas's tasks only — things requiring his direct action, decision or oversight
+const SEED = [
+  // DO MYSELF — Thomas must personally action
+  { id:'t01', title:'"Find out more" nurture journey — get to shippable state', why:'TV campaign live since May 22nd. Funnel broken. Every day = wasted media spend.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t02', title:'Clarify engineering ownership on "Find out more" journey', why:'Business pressure to launch this week. Need a clear handoff and timeline.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t03', title:'Send MSE account statement', why:'Flagged urgent — commercial relationship risk if it slips.', brand:'Cross', priority:'high', zone:'do', done:false },
+  { id:'t04', title:'Send Cameron: KB feedback + Hidden Form for SmartChat', why:'You are the only blocker to Monday go-live. Paul has signed off. 20 mins max.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t05', title:'Send protection referral form fields to David', why:'Fabian is waiting. David needs these to build the endpoint. You are the bottleneck.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t06', title:'Join legal call — resolve LiveChat contract terms', why:'Trial clarity, fees, cancellation. Paul co-owns but needs you on the call.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t07', title:'Chase Monty — get commercial website live', why:'Blocked and dragging. Only you can chase this at the right level.', brand:'OneDome', priority:'med', zone:'do', done:false },
+  { id:'t08', title:'Build nurturing email journeys for new user flow', why:'Directly supports TV funnel fix. You need to architect it.', brand:'OneDome', priority:'high', zone:'do', done:false },
+  { id:'t09', title:'Weekly performance report — build template', why:'Can\'t run a performance meeting without shared data. Do once, then delegate.', brand:'Cross', priority:'med', zone:'do', done:false },
+  { id:'t10', title:'Set up weekly performance meeting with Heads of Dept', why:'Lead gen visibility across CMME, Better, Coreco — currently invisible.', brand:'Cross', priority:'med', zone:'do', done:false },
+  { id:'t11', title:'Finalise retargeting ads — creative/budget decision', why:'Only Thomas needs to make the call. Monique handles execution.', brand:'OneDome', priority:'med', zone:'do', done:false },
+  { id:'t12', title:'Decide on awards participation strategy', why:'Marketing leadership decision. 2-week window before it drifts.', brand:'Cross', priority:'med', zone:'do', done:false },
+  { id:'t17', title:'Provide estate planning info + PR interview contact to Rachel', why:'Rachel is blocked. One email. Takes 10 minutes.', brand:'Cross', priority:'high', zone:'do', done:false },
+  { id:'t25', title:'Brief Kat + Tech on Better → OneDome Finance rebrand', why:'Kat owns delivery but needs your brief first. If migration lands before rebrand it\'s a crisis.', brand:'Better', priority:'med', zone:'do', done:false },
+  // DELEGATE — Thomas to brief, team to execute
+  { id:'t13', title:'Compile weekly marketing report (ongoing)', why:'Team owns from template. Thomas reviews Friday.', brand:'Cross', priority:'med', zone:'delegate', done:false, owner:'Marketing Exec' },
+  { id:'t14', title:'CMME About Us — remove old staff, update content', why:'Brief the team with a 48hr deadline. Execution only.', brand:'CMME', priority:'med', zone:'delegate', done:false, owner:'Marketing Exec / Copywriter' },
+  { id:'t22', title:'Internal social post engagement push', why:'Send one Teams message setting expectations. Team executes.', brand:'Cross', priority:'low', zone:'delegate', done:false, owner:'Marketing Team' },
+  { id:'t23', title:'Email signature rollout', why:'Brief team with deadline. Do not personally own this.', brand:'Cross', priority:'low', zone:'delegate', done:false, owner:'Marketing Exec' },
+  // PARK — important but not this week
+  { id:'t27', title:'H2 brand strategy deck', why:'Important but not this week. Schedule once funnel is stable.', brand:'Cross', priority:'med', zone:'park', done:false },
+  { id:'t28', title:'SEO/GEO strategy — dominate homebuying search', why:'Zero capacity until SEO/GEO specialist is hired.', brand:'OneDome', priority:'high', zone:'park', done:false },
+  { id:'t29', title:'Email cross-sell/upsell strategy', why:'Blocked until email automation specialist is hired.', brand:'Cross', priority:'high', zone:'park', done:false },
+  { id:'t30', title:'Tech/investor event presence plan', why:'Good opportunity. Not urgent. 2–3 week horizon.', brand:'Cross', priority:'low', zone:'park', done:false },
+  { id:'t32', title:'Review + standardise all job descriptions', why:'Month-end. Brief team to do it — do not write these yourself.', brand:'Cross', priority:'low', zone:'park', done:false },
+  { id:'t33', title:'Update Glassdoor, careers page, company profiles', why:'Month-end. Team task. Park until then.', brand:'Cross', priority:'low', zone:'park', done:false },
+];
+
 let tasks = [];
 let bigRockId = null;
 let activeBrand = 'all';
@@ -324,65 +253,61 @@ let dragId = null;
 let saveTimer = null;
 
 const brandMeta = {
-  OneDome: { cls:'brand-onedome' },
-  CMME:    { cls:'brand-cmme' },
-  Better:  { cls:'brand-better' },
-  Coreco:  { cls:'brand-coreco' },
-  Cross:   { cls:'' },
+  OneDome: { cls:'brand-onedome' }, CMME: { cls:'brand-cmme' },
+  Better: { cls:'brand-better' }, Coreco: { cls:'brand-coreco' }, Cross: { cls:'' },
 };
 
-// ---- SYNC STATUS ----
 function setStatus(state, text) {
   const el = document.getElementById('syncStatus');
   el.className = 'sync-status sync-' + state;
   el.textContent = text;
 }
 
-// ---- SHEET API ----
 async function fetchFromSheet() {
   setStatus('loading', 'Loading...');
   try {
     const res = await fetch(SCRIPT_URL + '?action=getTasks');
     const data = await res.json();
     if (data.error) throw new Error(data.error);
-
     if (!data.tasks || data.tasks.length === 0) {
-      // First load — seed the sheet with real tasks
-      setStatus('saving', 'Seeding tasks...');
+      setStatus('saving', 'Setting up your tasks...');
       await seedSheet();
       return;
     }
-
     tasks = data.tasks;
     bigRockId = data.bigRockId;
     setStatus('ok', '✓ Live');
-    return true;
   } catch(e) {
     setStatus('error', '✕ Connection error');
-    console.error(e);
-    return false;
+    // Fall back to seed data locally
+    tasks = SEED.map(s => ({...s}));
+    bigRockId = 't01';
   }
 }
 
 async function seedSheet() {
   try {
-    const res = await fetch(SCRIPT_URL + '?action=seed');
+    const payload = SEED.map(t => ({ ...t, bigRock: t.id === 't01' }));
+    const res = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'saveTasks', tasks: payload }),
+    });
     const data = await res.json();
     if (data.error) throw new Error(data.error);
-    // Now load
-    await fetchFromSheet();
+    tasks = SEED.map(s => ({...s}));
+    bigRockId = 't01';
+    setStatus('ok', '✓ Live');
   } catch(e) {
     setStatus('error', '✕ Seed failed');
+    tasks = SEED.map(s => ({...s}));
+    bigRockId = 't01';
   }
 }
 
 async function saveToSheet() {
   setStatus('saving', 'Saving...');
   try {
-    const payload = tasks.map(t => ({
-      ...t,
-      bigRock: t.id === bigRockId,
-    }));
+    const payload = tasks.map(t => ({ ...t, bigRock: t.id === bigRockId }));
     const res = await fetch(SCRIPT_URL, {
       method: 'POST',
       body: JSON.stringify({ action: 'saveTasks', tasks: payload }),
@@ -392,11 +317,9 @@ async function saveToSheet() {
     setStatus('ok', '✓ Saved');
   } catch(e) {
     setStatus('error', '✕ Save failed');
-    console.error(e);
   }
 }
 
-// Debounced save — waits 1.5s after last change
 function scheduleSave() {
   clearTimeout(saveTimer);
   setStatus('saving', 'Saving...');
@@ -404,12 +327,10 @@ function scheduleSave() {
 }
 
 async function refreshFromSheet() {
-  setStatus('loading', 'Refreshing...');
   await fetchFromSheet();
   render();
 }
 
-// ---- RENDER ----
 function render() {
   ['do','delegate','park','ignore'].forEach(z => {
     const el = document.getElementById('zone-' + z);
@@ -433,10 +354,8 @@ function buildCard(task) {
   div.dataset.id = task.id;
   if (task.done) div.style.opacity = '0.35';
   if (task.id === bigRockId) div.style.borderColor = 'var(--accent)';
-
   const bm = brandMeta[task.brand] || brandMeta.Cross;
   const pc = task.priority === 'high' ? 'p-high' : task.priority === 'med' ? 'p-med' : 'p-low';
-
   div.innerHTML = `
     <div class="card-top">
       <div class="card-title">${task.id === bigRockId ? '🪨 ' : ''}${task.title}</div>
@@ -452,9 +371,7 @@ function buildCard(task) {
       <button class="card-btn done-btn" onclick="markDone('${task.id}')">${task.done ? 'Undo' : '✓ Done'}</button>
       <button class="card-btn" onclick="setBigRock('${task.id}')">🪨 Big Rock</button>
       <button class="card-btn" onclick="deleteTask('${task.id}')">✕</button>
-    </div>
-  `;
-
+    </div>`;
   div.addEventListener('dragstart', () => { dragId = task.id; setTimeout(() => div.classList.add('dragging'), 0); });
   div.addEventListener('dragend', () => div.classList.remove('dragging'));
   return div;
@@ -471,10 +388,7 @@ function renderBigRock() {
   document.getElementById('bigRockTitle').textContent = t.title;
   document.getElementById('bigRockWhy').textContent = t.why || '';
   const bm = brandMeta[t.brand] || brandMeta.Cross;
-  document.getElementById('bigRockMeta').innerHTML = `
-    <span class="chip ${bm.cls}">${t.brand}</span>
-    <span class="chip">${t.priority.toUpperCase()} priority</span>
-  `;
+  document.getElementById('bigRockMeta').innerHTML = `<span class="chip ${bm.cls}">${t.brand}</span><span class="chip">${t.priority.toUpperCase()} priority</span>`;
 }
 
 function renderStats() {
@@ -487,125 +401,79 @@ function renderStats() {
 
 function renderRisks() {
   const risks = [
-    { color: '#ef4444', title: 'TV funnel broken since 22nd May', detail: 'Paid media hitting a leaky funnel. CPL rising. Every day unresolved = wasted spend.' },
-    { color: '#ef4444', title: 'SmartChat blocked by Thomas', detail: 'Paul has signed off. Cameron is waiting. Send KB feedback + Hidden Form.' },
-    { color: '#f59e0b', title: 'Protection referral form — Fabian waiting', detail: 'David needs fields from you to build the endpoint. Don\'t let this become a 2-week delay.' },
-    { color: '#f59e0b', title: '3 open hires — risk of drifting', detail: 'Digital Exec, Email Automation Specialist, SEO/GEO Specialist. No clear hire dates = Q3 goals slip.' },
-    { color: '#f59e0b', title: 'Better → OneDome Finance rebrand has no timeline', detail: 'Kat and Tech need a brief. If migration lands before rebrand, it becomes a crisis.' },
-    { color: '#6b7280', title: 'Weekly report doesn\'t exist yet', detail: 'Can\'t run a performance meeting without shared data. Template needed first.' },
+    { color:'#ef4444', title:'TV funnel broken since 22nd May', detail:'Paid media hitting a leaky funnel. CPL rising. Every day unresolved = wasted spend.' },
+    { color:'#ef4444', title:'SmartChat go-live blocked by Thomas', detail:'Paul signed off. Cameron is waiting. Send KB feedback + Hidden Form today.' },
+    { color:'#f59e0b', title:'Protection referral form — Fabian waiting', detail:'David needs fields from you to build the endpoint. You are the bottleneck.' },
+    { color:'#f59e0b', title:'3 open hires with no clear dates', detail:'Digital Exec, Email Automation Specialist, SEO/GEO Specialist. No hire dates = Q3 goals slip.' },
+    { color:'#f59e0b', title:'Better → OneDome Finance rebrand has no timeline', detail:'If migration lands before rebrand it becomes a crisis. Brief Kat now.' },
+    { color:'#6b7280', title:'Weekly performance report doesn\'t exist', detail:'Can\'t run a performance meeting without shared data. Template needed first.' },
   ];
   document.getElementById('riskList').innerHTML = risks.map(r => `
     <div class="risk-item">
       <div class="risk-dot" style="background:${r.color}"></div>
       <div class="risk-text"><strong>${r.title}</strong>${r.detail}</div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 function renderDayPlan() {
   const plan = [
-    { time:'9–9:30', bar:'bar-red', label:'Send MSE statement + unblock SmartChat', note:'Two quick tasks. Clear them before anything else.' },
-    { time:'9:30–11', bar:'bar-red', label:'Big Rock: "Find out more" nurture journey', note:'Deep work. No Slack, no meetings.' },
-    { time:'11–11:30', bar:'bar-amber', label:'Send fields to David (protection form)', note:'You\'re the bottleneck. 20 minutes max.' },
-    { time:'11:30–12', bar:'bar-amber', label:'Delegate batch to team', note:'One Teams message. CMME, sigs, social. Get it off your plate.' },
-    { time:'12–1', bar:'bar-muted', label:'Lunch / break', note:'Protect it.' },
-    { time:'1–2', bar:'bar-red', label:'Engineering call — clarify journey ownership', note:'Who builds it? What\'s the timeline? Get a clear answer.' },
-    { time:'2–3', bar:'bar-blue', label:'Chase Monty + LiveChat legal call', note:'Senior stakeholder moves. Only you can drive these.' },
-    { time:'3–4', bar:'bar-amber', label:'Retargeting ad decision + Monique check-in', note:'Make the call. Monique handles the rest.' },
-    { time:'4–5', bar:'bar-muted', label:'Inbox clear + update board', note:'What moved? What\'s blocked? Set tomorrow\'s Big Rock.' },
+    { time:'9–9:30',  bar:'bar-red',   label:'Send MSE statement + unblock SmartChat', note:'Two quick tasks. Clear them before anything else.' },
+    { time:'9:30–11', bar:'bar-red',   label:'Big Rock: "Find out more" nurture journey', note:'Deep work. No Slack, no meetings.' },
+    { time:'11–11:30',bar:'bar-amber', label:'Send fields to David (protection form)', note:'You\'re the bottleneck. 20 minutes max.' },
+    { time:'11:30–12',bar:'bar-amber', label:'Delegate batch to team', note:'Brief Marketing Exec on report, CMME, sigs. One message.' },
+    { time:'12–1',    bar:'bar-muted', label:'Lunch / break', note:'Protect it.' },
+    { time:'1–2',     bar:'bar-red',   label:'Engineering call — clarify journey ownership', note:'Who builds it? What\'s the timeline? Get a clear answer.' },
+    { time:'2–3',     bar:'bar-blue',  label:'Chase Monty + LiveChat legal call', note:'Senior stakeholder moves. Only you can drive these.' },
+    { time:'3–4',     bar:'bar-amber', label:'Retargeting ad decision + Monique check-in', note:'Make the call. Monique handles the rest.' },
+    { time:'4–5',     bar:'bar-muted', label:'Inbox clear + update board', note:'What moved? What\'s blocked? Set tomorrow\'s Big Rock.' },
   ];
   document.getElementById('dayPlan').innerHTML = plan.map(d => `
     <div class="time-block">
       <div class="time">${d.time}</div>
       <div class="time-bar ${d.bar}"></div>
       <div><div class="time-label">${d.label}</div><div class="time-note">${d.note}</div></div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
-// ---- ACTIONS ----
-function markDone(id) {
-  const t = tasks.find(x=>x.id===id);
-  if (t) { t.done = !t.done; render(); scheduleSave(); }
-}
-
-function deleteTask(id) {
-  tasks = tasks.filter(x=>x.id!==id);
-  if (bigRockId===id) bigRockId=null;
-  render(); scheduleSave();
-}
-
-function setBigRock(id) {
-  bigRockId = id;
-  render(); scheduleSave();
-}
-
-function clearDone() {
-  tasks = tasks.filter(x=>!x.done);
-  render(); scheduleSave();
-}
-
-// ---- DRAG ----
 function onDragOver(e) { e.preventDefault(); e.currentTarget.classList.add('drop-zone-active'); }
 function onDragLeave(e) { e.currentTarget.classList.remove('drop-zone-active'); }
 function onDrop(e, zone) {
-  e.preventDefault();
-  e.currentTarget.classList.remove('drop-zone-active');
+  e.preventDefault(); e.currentTarget.classList.remove('drop-zone-active');
   if (!dragId) return;
   const t = tasks.find(x=>x.id===dragId);
   if (t) { t.zone = zone; render(); scheduleSave(); }
   dragId = null;
 }
-
-// ---- FILTER ----
+function markDone(id) { const t=tasks.find(x=>x.id===id); if(t){t.done=!t.done; render(); scheduleSave();} }
+function deleteTask(id) { tasks=tasks.filter(x=>x.id!==id); if(bigRockId===id) bigRockId=null; render(); scheduleSave(); }
+function setBigRock(id) { bigRockId=id; render(); scheduleSave(); }
+function clearDone() { tasks=tasks.filter(x=>!x.done); render(); scheduleSave(); }
 function filterBrand(brand, el) {
-  activeBrand = brand;
-  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-  render();
+  activeBrand=brand;
+  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active'); render();
 }
-
-// ---- MODAL ----
 function openModal() { document.getElementById('modalOverlay').classList.add('open'); document.getElementById('taskTitle').focus(); }
 function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
 function closeModalOnOverlay(e) { if(e.target===document.getElementById('modalOverlay')) closeModal(); }
-
-function uid() { return 'task_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
-
+function uid() { return 'task_'+Date.now()+'_'+Math.random().toString(36).slice(2,6); }
 function addTask() {
-  const title = document.getElementById('taskTitle').value.trim();
-  if (!title) return;
-  tasks.push({
-    id: uid(),
-    title,
-    why: document.getElementById('taskWhy').value.trim(),
-    brand: document.getElementById('taskBrand').value,
-    priority: document.getElementById('taskPriority').value,
-    zone: document.getElementById('taskZone').value,
-    owner: document.getElementById('taskOwner').value.trim(),
-    done: false,
-  });
+  const title=document.getElementById('taskTitle').value.trim();
+  if(!title) return;
+  tasks.push({ id:uid(), title, why:document.getElementById('taskWhy').value.trim(), brand:document.getElementById('taskBrand').value, priority:document.getElementById('taskPriority').value, zone:document.getElementById('taskZone').value, owner:document.getElementById('taskOwner').value.trim(), done:false });
   render(); scheduleSave();
-  ['taskTitle','taskWhy','taskOwner'].forEach(id => document.getElementById(id).value='');
+  ['taskTitle','taskWhy','taskOwner'].forEach(id=>document.getElementById(id).value='');
   closeModal();
 }
-
-// ---- KEYBOARD ----
-document.addEventListener('keydown', e => {
-  if (e.key==='Escape') closeModal();
-  if ((e.metaKey||e.ctrlKey)&&e.key==='k') { e.preventDefault(); openModal(); }
-});
-
-// ---- INIT ----
-document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('en-GB', {weekday:'long',day:'numeric',month:'long'});
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();openModal();} });
+document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
 renderRisks();
 renderDayPlan();
-
-(async () => {
+(async()=>{
   await fetchFromSheet();
   render();
   document.getElementById('loadingOverlay').classList.add('hidden');
-  setTimeout(() => document.getElementById('loadingOverlay').remove(), 500);
+  setTimeout(()=>document.getElementById('loadingOverlay').remove(),500);
 })();
 </script>
 </body>
