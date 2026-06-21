@@ -172,7 +172,7 @@ const TASKS = [
   // DO MYSELF
   { id:'t01', title:'"Find out more" nurture journey — get to shippable state', why:'TV campaign live since May 22nd. Funnel broken. Every day = wasted media spend.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t02', title:'Clarify engineering ownership on "Find out more" journey', why:'Business pressure to launch this week. Need a clear handoff and timeline.', brand:'OneDome', priority:'high', zone:'do', done:false },
-  { id:'t03', title:'Send MSE account statement', why:'Flagged urgent — commercial relationship risk if it slips.', brand:'Cross', priority:'high', zone:'do', done:false },
+  { id:'t03', title:'MSE invoicing — send account statement', why:'Flagged urgent. Allow 1 hour — do not rush this. Send and confirm receipt Monday afternoon.', brand:'Cross', priority:'high', zone:'do', done:false },
   { id:'t04', title:'Send Cameron: KB feedback + Hidden Form for SmartChat', why:'You are the only blocker to Monday go-live. Paul has signed off. 20 mins max.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t05', title:'Send protection referral form fields to David', why:'Fabian is waiting. David needs these to build the endpoint. You are the bottleneck.', brand:'OneDome', priority:'high', zone:'do', done:false },
   { id:'t06', title:'Join legal call — resolve LiveChat contract terms', why:'Trial clarity, fees, cancellation. Paul co-owns but needs you on the call.', brand:'OneDome', priority:'high', zone:'do', done:false },
@@ -210,19 +210,19 @@ const RISKS = [
 
 const DAY_PLAN = [
   { time:'8:00',        bar:'bar-muted', label:'Travel to work', note:'Use the commute to think through LiveChat terms — what do you need resolved on the call?' },
-  { time:'10:00–10:30', bar:'bar-red',   label:'Quick wins: SmartChat unblock + MSE statement', note:'Send Cameron KB feedback + Hidden Form. Send MSE statement. Both done in 30 mins. Clear the decks.' },
+  { time:'10:00–10:30', bar:'bar-red',   label:'SmartChat unblock + send MSE statement', note:'Send Cameron KB feedback + Hidden Form. Fire off MSE statement. Both done in 30 mins.' },
   { time:'10:30–11',    bar:'bar-red',   label:'LiveChat prep — know your position before the call', note:'What terms are you pushing on? Trial length, fees, cancellation. Go in with a clear walk-away position.' },
   { time:'11:00–12',    bar:'bar-blue',  label:'Q3 Plan follow up — Paul Troy', note:'Come out knowing what decisions need CEO sign-off at 16:00.' },
   { time:'12:00–12:30', bar:'bar-amber', label:'CEO Meeting prep — 30 mins only', note:'TV status in one sentence. 2-3 approvals you need. That's it. Do not over-prepare.' },
   { time:'12:30–13',    bar:'bar-muted', label:'Lunch', note:'Protect it.' },
-  { time:'13:00–14',    bar:'bar-red',   label:'LiveChat legal call — get it resolved', note:'This is the Big Rock. Resolve trial terms, fees, cancellation. Come out with a clear next step or signed off.' },
-  { time:'14:00–14:30', bar:'bar-muted', label:'Phonexa discovery call', note:'Sales pitch — listen, ask questions, do not commit to anything. 30 mins max.' },
-  { time:'14:30–15:30', bar:'bar-amber', label:'Send fields to David + delegate batch', note:'Protection referral fields to David (10 mins). Brief Marketing Exec on report, CMME, sigs.' },
+  { time:'13:00–14',    bar:'bar-red',   label:'LiveChat legal call — get it resolved', note:'Big Rock. Resolve trial terms, fees, cancellation. Come out with a signed-off next step.' },
+  { time:'14:00–15',    bar:'bar-amber', label:'MSE invoicing — full hour', note:'Do not rush this. Get it right. Send and confirm receipt before the Marketing Meeting.' },
+  { time:'15:00–15:30', bar:'bar-amber', label:'Send fields to David + delegate batch', note:'Protection referral fields to David (10 mins). Brief Marketing Exec on report, CMME, sigs.' },
   { time:'15:30–16',    bar:'bar-muted', label:'Buffer — compose yourself', note:'Do not start anything new. Quick review of what you are bringing to the meeting.' },
   { time:'16:00–17:30', bar:'bar-blue',  label:'Marketing Meeting — Sign-off', note:'TV update, CEO approvals, full team. You prepped at 12:00 — you are ready.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 — LiveChat priority, 30 min CEO prep at 12:00";
+const LAST_UPDATED = "Monday 22 June 2026 — Phonexa moved to Friday, MSE invoicing 14:00–15:00";
 
 // ---- STATE ----
 let activeBrand = 'all';
