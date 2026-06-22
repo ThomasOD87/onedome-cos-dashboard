@@ -113,8 +113,8 @@
 <div class="main">
   <div class="big-rock">
     <div class="big-rock-label">🪨 Big Rock Today</div>
-    <div class="big-rock-title">SmartChat go-live + MSE account statement</div>
-    <div class="big-rock-why">Two priorities today, nothing else matters until these are done. (1) Send Cameron the KB feedback and Hidden Form — you are the only blocker to Monday go-live. (2) Send MSE account statement — urgent commercial relationship. Everything else is best-effort around these two.</div>
+    <div class="big-rock-title">✅ Today done — Tomorrow: "Find out more" nurture journey</div>
+    <div class="big-rock-why">Thomas owns delivery of this end-to-end. Dependencies: (1) Finalise Base44 prototype — Thomas. (2) Confirm subdomain with Tural — Thomas to chase. (3) Scope CRM/callback integration — Thomas to brief David. (4) Claude Code build + deployment — Thomas driving with Tural. This is a multi-day workstream. Tomorrow's job is to finalise the prototype and unblock every dependency. TV campaign has been live since 22nd May — every day of delay costs money.</div>
     <div class="big-rock-footer">
       <span class="chip brand-onedome">OneDome</span>
       <span class="chip">HIGH priority</span>
@@ -213,12 +213,14 @@ const DAY_PLAN = [
   { time:'16:00–17:30', bar:'bar-blue',  label:'CEO + Marketing Meeting', note:'Wins: MSE done, SmartChat unblocked. Key ask: engineering ownership on nurture journey. Flag Q3 PPT due Friday.' },
   { time:'17:30–18:30', bar:'bar-muted', label:'Train home — email signature HTML', note:'45 min task. Good use of dead time. Rachel is waiting on this.' },
   { time:'── TOMORROW ──', bar:'bar-muted', label:'', note:'' },
-  { time:'Morning',     bar:'bar-red',   label:'🪨 Big Rock: Lead nurture journey', note:'Block 2-3 hours minimum. This is the most commercially important task this week — TV campaign funnel is broken.' },
-  { time:'Afternoon',   bar:'bar-amber', label:'CMME PK codes for 71A', note:'Quick task — 10 mins. 71A campaigns are ready and waiting on these.' },
-  { time:'Afternoon',   bar:'bar-amber', label:'Email signature HTML (if not done on train)', note:'45 mins. Rachel is waiting. Do not let this carry into Wednesday.' },
+  { time:'Morning',     bar:'bar-red',   label:'🪨 Big Rock: Finalise Base44 nurture prototype', note:'Thomas owns this. Lock the flow, copy and form fields. Get it to a state ready to hand to Tural for Claude Code build. Do not leave this unfinished.' },
+  { time:'Morning',     bar:'bar-red',   label:'Chase Tural — confirm subdomain + deployment timeline', note:'Thomas to chase. Subdomain not confirmed yet. Need a realistic go-live date from Tural before you can set expectations with the business.' },
+  { time:'Morning',     bar:'bar-red',   label:'Brief David on CRM/callback integration', note:'Thomas to scope and send. The callback form needs CRM integration — David needs a clear brief on what fields and what system before he can build the endpoint.' },
+  { time:'Afternoon',   bar:'bar-amber', label:'CMME PK codes for 71A', note:'Quick task — 10 mins. Campaigns are ready and waiting.' },
+  { time:'Afternoon',   bar:'bar-amber', label:'Email signature HTML (if not done on train tonight)', note:'45 mins. Rachel is waiting.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 15:30 — MSE done ✅, SmartChat KB + form sent ✅, Hannah call 16:15, go-live tomorrow";
+const LAST_UPDATED = "Monday 22 June 2026 15:20 — MSE ✅ SmartChat ✅ Protection form ✅ Tomorrow: Thomas owns nurture journey delivery end-to-end";
 
 // ---- STATE ----
 let activeBrand = 'all';
@@ -297,6 +299,7 @@ render();
 </script>
 </body>
 </html>
+
 
 
 
