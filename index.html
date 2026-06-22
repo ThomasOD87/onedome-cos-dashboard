@@ -113,8 +113,8 @@
 <div class="main">
   <div class="big-rock">
     <div class="big-rock-label">🪨 Big Rock Today</div>
-    <div class="big-rock-title">Send KB feedback + Hidden Form to Cameron — unblock SmartChat go-live</div>
-    <div class="big-rock-why">Cameron needs the Knowledge Base feedback and the Hidden Form to push leads into the CRM. He never received the email. You are the only blocker. This unlocks go-live. Do it first thing.</div>
+    <div class="big-rock-title">SmartChat go-live + MSE account statement</div>
+    <div class="big-rock-why">Two priorities today, nothing else matters until these are done. (1) Send Cameron the KB feedback and Hidden Form — you are the only blocker to Monday go-live. (2) Send MSE account statement — urgent commercial relationship. Everything else is best-effort around these two.</div>
     <div class="big-rock-footer">
       <span class="chip brand-onedome">OneDome</span>
       <span class="chip">HIGH priority</span>
@@ -207,22 +207,18 @@ const RISKS = [
 ];
 
 const DAY_PLAN = [
-  { time:'8:00',        bar:'bar-muted', label:'Travel to work', note:'Use the commute to think through LiveChat terms — what do you need resolved on the call?' },
-  { time:'10:00–10:30', bar:'bar-red',   label:'SmartChat unblock + send MSE statement', note:'Send Cameron KB feedback + Hidden Form. Fire off MSE statement. Both done in 30 mins.' },
-  { time:'10:00–10:30', bar:'bar-red',   label:'🪨 Big Rock: Send KB feedback + Hidden Form to Cameron', note:'Do this first. Attach the Hidden Form, include KB feedback clearly. Confirm receipt. Unblocks go-live.' },
-  { time:'10:30–11',    bar:'bar-amber', label:'Send fields to David + MSE statement', note:'Protection referral fields to David (10 mins). Fire off MSE statement.' },
-  { time:'11:00–12',    bar:'bar-blue',  label:'Q3 Plan follow up — Paul Troy', note:'Come out knowing what decisions need CEO sign-off at 16:00.' },
-  { time:'12:00–12:30', bar:'bar-amber', label:'CEO Meeting prep — 30 mins only', note:'TV status in one sentence. 2-3 approvals you need. Do not over-prepare.' },
-  { time:'12:30–13',    bar:'bar-muted', label:'Lunch', note:'Protect it.' },
-  { time:'13:00–14',    bar:'bar-amber', label:'Chase Monty + finalise nurture journey in Base44', note:'Chase Monty on commercial website (10 mins). Then focus on getting the nurture journey to a showable state for Tural tomorrow.'},
-  { time:'14:00–15',    bar:'bar-amber', label:'MSE invoicing — full hour', note:'Do not rush this. Get it right. Send and confirm receipt before the Marketing Meeting.' },
-  { time:'15:00–15:30', bar:'bar-amber', label:'Send fields to David + delegate batch', note:'Protection referral fields to David (10 mins). Brief Marketing Exec on report, CMME, sigs.' },
-  { time:'15:30–16',    bar:'bar-muted', label:'Buffer — compose yourself', note:'Do not start anything new. Quick review of what you are bringing to the meeting.' },
-  { time:'16:00–17:30', bar:'bar-blue',  label:'Marketing Meeting — Sign-off', note:'TV update, CEO approvals, full team. You prepped at 12:00 — you are ready.' },
-  { time:'17:30–18:30', bar:'bar-muted', label:'Wind down — clear loops, prep tomorrow', note:'Low energy time. No new tasks. Inbox replies, update dashboard, tell Claude what moved. Leave clean.' },
+  { time:'8:00',        bar:'bar-muted', label:'Travel to work', note:'Use the commute to think through what KB feedback you need to give Cameron — come in ready to write it.' },
+  { time:'10:00–11:00', bar:'bar-red',   label:'🪨 Priority 1: MSE account statement', note:'Do this first. Full hour. Do not rush it. Send and confirm receipt before anything else.' },
+  { time:'11:00–13:00', bar:'bar-red',   label:'🪨 Priority 2: SmartChat KB feedback + Hidden Form', note:'Full 2-hour block. KB feedback clearly annotated, Hidden Form built and sent to Cameron. Confirm receipt. This unblocks Monday go-live.' },
+  { time:'13:00–13:30', bar:'bar-muted', label:'Lunch', note:'Protect it. You have had a productive morning.' },
+  { time:'13:30–14:00', bar:'bar-amber', label:'Quick wins — if time allows', note:'Chase Babek (Instagram, 2 mins). Fields to David for protection form (20 mins). Chase Monty on commercial website (5 mins). Do what you can.' },
+  { time:'14:00–15:30', bar:'bar-blue',  label:'Nurture journey — start if capacity allows', note:'Best effort only. Do not sacrifice SmartChat or MSE for this. Even 90 mins of progress is useful.' },
+  { time:'15:30–16:00', bar:'bar-muted', label:'Buffer — prep for meetings', note:'Do not start anything new. Quick review of what you are bringing to the CEO and Marketing meetings.' },
+  { time:'16:00–17:30', bar:'bar-blue',  label:'CEO + Marketing Meeting', note:'Come prepared with TV funnel status in one sentence and 2-3 decisions you need signed off.' },
+  { time:'17:30–18:30', bar:'bar-muted', label:'Wind down — clear loops, prep tomorrow', note:'Update dashboard. Tell Claude what moved. Nurture journey becomes the Big Rock tomorrow.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 — nurture journey tasks added, Tural meeting Tue/Wed";
+const LAST_UPDATED = "Monday 22 June 2026 — day plan rebuilt around two priorities: SmartChat go-live + MSE statement";
 
 // ---- STATE ----
 let activeBrand = 'all';
@@ -301,3 +297,4 @@ render();
 </script>
 </body>
 </html>
+
