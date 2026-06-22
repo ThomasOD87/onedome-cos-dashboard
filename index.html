@@ -207,18 +207,18 @@ const RISKS = [
 ];
 
 const DAY_PLAN = [
-  { time:'8:00',        bar:'bar-muted', label:'Travel to work', note:'Use the commute to think through what KB feedback you need to give Cameron — come in ready to write it.' },
-  { time:'10:00–11:00', bar:'bar-red',   label:'🪨 Priority 1: MSE account statement', note:'Do this first. Full hour. Do not rush it. Send and confirm receipt before anything else.' },
-  { time:'11:00–13:00', bar:'bar-red',   label:'🪨 Priority 2: SmartChat KB feedback + Hidden Form', note:'Full 2-hour block. KB feedback clearly annotated, Hidden Form built and sent to Cameron. Confirm receipt. This unblocks Monday go-live.' },
-  { time:'13:00–13:30', bar:'bar-muted', label:'Lunch', note:'Protect it. You have had a productive morning.' },
-  { time:'13:30–14:00', bar:'bar-amber', label:'Quick wins — if time allows', note:'Chase Babek (Instagram, 2 mins). Fields to David for protection form (20 mins). Chase Monty on commercial website (5 mins). Do what you can.' },
-  { time:'14:00–15:30', bar:'bar-blue',  label:'Nurture journey — start if capacity allows', note:'Best effort only. Do not sacrifice SmartChat or MSE for this. Even 90 mins of progress is useful.' },
-  { time:'15:30–16:00', bar:'bar-muted', label:'Buffer — prep for meetings', note:'Do not start anything new. Quick review of what you are bringing to the CEO and Marketing meetings.' },
-  { time:'16:00–17:30', bar:'bar-blue',  label:'CEO + Marketing Meeting', note:'Come prepared with TV funnel status in one sentence and 2-3 decisions you need signed off.' },
-  { time:'17:30–18:30', bar:'bar-muted', label:'Wind down — clear loops, prep tomorrow', note:'Update dashboard. Tell Claude what moved. Nurture journey becomes the Big Rock tomorrow.' },
+  { time:'✅ Done',      bar:'bar-muted', label:'MSE commission statement sent', note:'Complete. £2,365.66 commission statement built and sent.' },
+  { time:'12:45–15:00', bar:'bar-red',   label:'🪨 SmartChat KB review + prep', note:'Review KB document and have feedback ready. Prepare Hidden Form fields. Hannah confirmed for 3pm call.' },
+  { time:'15:00–16:00', bar:'bar-red',   label:'🪨 SmartChat Instant Connect demo (Cameron + Hannah)', note:'Close out KB feedback, Hidden Form, and Instant Connect setup on the call. Target: go-live tomorrow confirmed.' },
+  { time:'16:00–17:30', bar:'bar-blue',  label:'CEO + Marketing Meeting', note:'Wins: MSE done, SmartChat unblocked. Key ask: engineering ownership on nurture journey. Flag Q3 PPT due Friday.' },
+  { time:'17:30–18:30', bar:'bar-muted', label:'Train home — email signature HTML', note:'45 min task. Good use of dead time. Rachel is waiting on this.' },
+  { time:'── TOMORROW ──', bar:'bar-muted', label:'', note:'' },
+  { time:'Morning',     bar:'bar-red',   label:'🪨 Big Rock: Lead nurture journey', note:'Block 2-3 hours minimum. This is the most commercially important task this week — TV campaign funnel is broken.' },
+  { time:'Afternoon',   bar:'bar-amber', label:'CMME PK codes for 71A', note:'Quick task — 10 mins. 71A campaigns are ready and waiting on these.' },
+  { time:'Afternoon',   bar:'bar-amber', label:'Email signature HTML (if not done on train)', note:'45 mins. Rachel is waiting. Do not let this carry into Wednesday.' },
 ];
 
-const LAST_UPDATED = "Monday 22 June 2026 — day plan rebuilt around two priorities: SmartChat go-live + MSE statement";
+const LAST_UPDATED = "Monday 22 June 2026 12:45 — MSE done ✅, SmartChat demo at 3pm, tomorrow Big Rock: nurture journey";
 
 // ---- STATE ----
 let activeBrand = 'all';
@@ -297,4 +297,5 @@ render();
 </script>
 </body>
 </html>
+
 
