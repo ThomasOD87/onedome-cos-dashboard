@@ -209,17 +209,23 @@ const RISKS = [
 ];
 
 const DAY_PLAN = [
-  { time:'── TODAY TUE 23 JUNE ──', bar:'bar-muted', label:'', note:'' },
-  { time:'✅ Done',      bar:'bar-muted', label:'Email signature HTML ✅', note:'Done Tuesday. Rachel has it.' },
-  { time:'9:00–11:30',  bar:'bar-red',   label:'🪨 Big Rock: Nurture journey — finalise and go live', note:'Tural finalising GitHub repo and workflows. Pick up where you left off. Go-live target Wednesday. Tural finalising repo tonight. Pick up first thing tomorrow.' },
-  { time:'11:30–12:00', bar:'bar-blue',  label:'RTL Sprint meeting', note:'Fixed. Do not let it drag.' },
-  { time:'12:00–13:00', bar:'bar-red',   label:'Continue nurture journey build', note:'Keep momentum. Stay on it.' },
-  { time:'13:00–13:30', bar:'bar-muted', label:'Lunch 🥪', note:'Protect it.' },
-  { time:'13:30–15:00', bar:'bar-amber', label:'Drop-off data deep dive + Aircall transcript analysis', note:'Both due Wednesday. Pull data, download call scripts, document key drop-off reasons and customer insights.' },
-  { time:'15:00–15:30', bar:'bar-amber', label:'CMME PK codes for 71A + Chase Alex (Instagram)', note:'PK codes 10 mins. Instagram access via Alex 5 mins. Both quick, do not skip.' },
+  { time:'── TODAY TUE 23 JUNE — EOD ──', bar:'bar-muted', label:'', note:'' },
+  { time:'✅ Done', bar:'bar-muted', label:'Email signature HTML ✅', note:'Done. Rachel has it.' },
+  { time:'✅ Done', bar:'bar-muted', label:'CFO call with Dom ✅', note:'Dom taking actions on lead numbers. Nothing on Thomas for now — monitor.' },
+  { time:'✅ Done', bar:'bar-muted', label:'Nurture journey — in progress', note:'Not fully complete. Tural finalising GitHub repo and workflows overnight. Pick up first thing Wednesday.' },
+
+  { time:'── TOMORROW WED 24 JUNE ──', bar:'bar-muted', label:'', note:'' },
+  { time:'9:00–12:00', bar:'bar-red',   label:'🪨 Big Rock: Nurture journey — finalise and go live', note:'Tural finalising repo tonight. Pick up first thing. Go-live target today. This is the only thing that matters this morning.' },
+  { time:'12:00–12:30', bar:'bar-muted', label:'Lunch 🥪', note:'Protect it.' },
+  { time:'12:30–14:00', bar:'bar-amber', label:'Drop-off data deep dive + Aircall transcript analysis', note:'Due today. Pull data, download call scripts, document key drop-off reasons and insights.' },
+  { time:'14:00–14:30', bar:'bar-amber', label:'CMME PK codes for 71A + Chase Alex (Instagram)', note:'PK codes 10 mins. Instagram access via Alex 5 mins. Quick — do not skip.' },
+  { time:'14:30–17:00', bar:'bar-blue',  label:'Q3 Planning prep — build PPT', note:'Due Friday. Thursday is back to back meetings so Wednesday afternoon is your only window to prep. Use the Miro board. 3-4 building blocks per headline.' },
+
+  { time:'── THURSDAY 25 JUNE — Q3 PLANNING DAY ──', bar:'bar-muted', label:'', note:'' },
+  { time:'All day',    bar:'bar-blue',  label:'Q3 Planning sessions with departmental heads', note:'Back to back meetings with 2x 30 min gaps. Use gaps to capture actions and decisions — do not let them fill with admin. Come out with a clear Q3 plan signed off.' },
 ];
 
-const LAST_UPDATED = "Tuesday 23 June 2026 EOD — Email sig done ✅. Big Rock: nurture journey go-live tomorrow (Wed). Tural finalising repo tonight.";
+const LAST_UPDATED = "Tuesday 23 June 2026 EOD — Email sig ✅ CFO call ✅. Wednesday: nurture go-live + Q3 prep. Thursday: Q3 planning day.";
 
 // ---- STATE ----
 let activeBrand = 'all';
@@ -298,6 +304,7 @@ render();
 </script>
 </body>
 </html>
+
 
 
 
